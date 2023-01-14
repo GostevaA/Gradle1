@@ -14,8 +14,9 @@ public class CashbackHackServiceTest {
         int actual = service.remain(2300);
         assertEquals(actual, expected);
     }
+
     @Test
-    public void shouldNoAdviseThanAmountEqualsThousand(){
+    public void shouldNoAdviseThanAmountEqualsThousand() {
         CashbackHackService service = new CashbackHackService();
         int expected = 0;
         int actual = service.remain(1000);
@@ -23,12 +24,13 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    public void shouldAdviseThanAmountBeforeThousand(){
+    public void shouldAdviseThanAmountBeforeThousand() {
         CashbackHackService service = new CashbackHackService();
         int expected = 500;
         int actual = service.remain(500);
         assertEquals(actual, expected);
     }
+
     @Test
     public void shouldAdviseThenAmountNotRound() {
         CashbackHackService service = new CashbackHackService();
